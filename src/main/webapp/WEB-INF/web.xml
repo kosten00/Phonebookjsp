@@ -1,0 +1,49 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	      http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <display-name>PhoneBook on Servlets</display-name>
+
+    <servlet>
+        <servlet-name>AddContactsServlet</servlet-name>
+        <servlet-class>ru.academits.servlet.AddContactServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>StartServlet</servlet-name>
+        <servlet-class>ru.academits.servlet.StartServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RemoveContactsServlet</servlet-name>
+        <servlet-class>ru.academits.servlet.RemoveContactsServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>FilterContactsServlet</servlet-name>
+        <servlet-class>ru.academits.servlet.FilterContactsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddContactsServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>StartServlet</servlet-name>
+        <url-pattern>/phonebook</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RemoveContactsServlet</servlet-name>
+        <url-pattern>/remove</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>FilterContactsServlet</servlet-name>
+        <url-pattern>/filter</url-pattern>
+    </servlet-mapping>
+</web-app>
+
