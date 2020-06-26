@@ -52,7 +52,8 @@
             <tr>
                 <td>
                     <label class="select-me-label">
-                        <input type="checkbox" class="select-me" name="selectedContactsIds"
+                        <input type="checkbox" onClick="uncheckSelectAllCheckbox()" class="select-me"
+                               name="selectedContactsIds"
                                value="<%=contact.getId()%>"/>
                     </label>
                 </td>
@@ -136,6 +137,12 @@
 <script>
     var allCheckBoxes = document.getElementsByClassName("select-me");
     var selectAllCheckbox = document.getElementById("select-all");
+
+    function uncheckSelectAllCheckbox() {
+        if (!allCheckBoxes.checked) {
+            selectAllCheckbox.checked = false;
+        }
+    }
 
     function selectAll() {
         if (selectAllCheckbox.checked === true) {
