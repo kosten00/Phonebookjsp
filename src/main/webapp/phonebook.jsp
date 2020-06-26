@@ -22,7 +22,7 @@
         <form method="POST" action="filter">
             <label class="filter-label mb-0 mr-2">
                 Введите текст:
-                <input type="text" class="form-control input-sm" name="filteredString" id="filter-input"/>
+                <input type="text" class="form-control input-sm" name="filterString" id="filter-input"/>
             </label>
             <button class="btn btn-primary" type="submit">Отфильтровать</button>
             <button class="btn btn-primary" id="cancel-button" name="cancelFilter">Сбросить фильтр</button>
@@ -144,7 +144,7 @@
             }
         } else {
             for (var j = 0; j < allCheckBoxes.length; j++) {
-                allCheckBoxes[i].checked = false;
+                allCheckBoxes[j].checked = false;
             }
         }
     }

@@ -15,11 +15,11 @@ public class FilterContactsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
 
-        if (req.getParameter("cancelFiler") != null) {
+        if (req.getParameter("cancelFilter") != null) {
             resp.sendRedirect("/phonebook");
         } else {
-            String filteredString = req.getParameter("filteredString");
-            req.setAttribute("contactList", contactService.getFilteredContacts(filteredString));
+            String filterString = req.getParameter("filterString");
+            req.setAttribute("contactList", contactService.getFilteredContacts(filterString));
             req.setAttribute("contactValidation", contactService.getLastContactValidation());
             req.setAttribute("currentContact", contactService.getLastContact());
             req.getRequestDispatcher("phonebook.jsp").forward(req, resp);
