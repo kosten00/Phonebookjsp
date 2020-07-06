@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * Created by Anna on 17.06.2017.
- */
 public class ContactDao {
     private List<Contact> contactList = new ArrayList<>();
     private static AtomicInteger idSequence = new AtomicInteger();
